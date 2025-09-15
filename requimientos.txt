@@ -1,0 +1,40 @@
+Requerimientos de la aplicación de cálculo de subredes
+
+Objetivo:
+Desarrollar una aplicación web que permita a un usuario calcular información de red a partir de una dirección IP y la cantidad de hosts o máscara de subred.
+
+Requerimientos funcionales:
+
+La aplicación debe permitir al usuario ingresar:
+
+Una dirección IP válida (IPv4).
+
+La cantidad de hosts por subred o la máscara de subred (opcional según la preferencia del usuario).
+
+Al presionar el botón de “Calcular”, la aplicación debe mostrar:
+
+IP de red.
+
+Máscara de subred.
+
+IP de broadcast.
+
+Rango de hosts válidos.
+
+Gateway (predeterminado como el primer host de la subred).
+
+La aplicación debe validar que la IP ingresada sea correcta antes de realizar los cálculos.
+
+Los resultados deben mostrarse en forma clara y organizada en la interfaz web.
+
+Requerimientos no funcionales:
+
+La aplicación debe estar desarrollada únicamente con HTML, CSS y JavaScript (sin backend ni bases de datos).
+
+La interfaz debe ser amigable y responsiva, para que se pueda usar en diferentes dispositivos (PC, tablet, móvil).
+
+El código debe ser modular y comentado para facilitar su mantenimiento y futuras mejoras.
+
+La aplicación debe manejar errores de entrada, mostrando mensajes claros al usuario cuando la IP no sea válida o los datos estén incompletos.
+
+Ficheros, clases, funciones, variables en español.
