@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Subredes IP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Subredes IP</h1>
+            <p>Calcula información de red a partir de una dirección IP</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <form id="subnet-form">
+                    <div class="form-group">
+                        <label for="ip-address">Dirección IP (IPv4):</label>
+                        <input type="text" id="ip-address" placeholder="Ej: 192.168.1.100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-type">Tipo de entrada:</label>
+                        <select id="input-type">
+                            <option value="hosts">Cantidad de hosts</option>
+                            <option value="mask">Máscara de subred</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="hosts-group">
+                        <label for="hosts-count">Cantidad de hosts:</label>
+                        <input type="number" id="hosts-count" placeholder="Ej: 254" min="1">
+                    </div>
+
+                    <div class="form-group" id="mask-group" style="display: none;">
+                        <label for="subnet-mask">Máscara de subred:</label>
+                        <input type="text" id="subnet-mask" placeholder="Ej: 255.255.255.0">
+                    </div>
+
+                    <button type="submit" id="calculate-btn">Calcular</button>
+                </form>
+
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </div>
+
+            <div class="results-section" id="results-section" style="display: none;">
+                <h2>Resultados del Cálculo</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <label>IP de Red:</label>
+                        <span id="network-ip"></span>
+                    </div>
+                    <div class="result-item">
+                        <label>Máscara de Subred:</label>
+                        <span id="subnet-mask-result"></span>
+                    </div>
+                    <div class="result-item">
+                        <label>IP de Broadcast:</label>
+                        <span id="broadcast-ip"></span>
+                    </div>
+                    <div class="result-item">
+                        <label>Primer Host:</label>
+                        <span id="first-host"></span>
+                    </div>
+                    <div class="result-item">
+                        <label>Último Host:</label>
+                        <span id="last-host"></span>
+                    </div>
+                    <div class="result-item">
+                        <label>Gateway (Predeterminado):</label>
+                        <span id="gateway"></span>
+                    </div>
+                    <div class="result-item">
+                        <label>Total de Hosts:</label>
+                        <span id="total-hosts"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Calculadora de Subredes IP. Jhons.</p>
+    </footer>
+    <!-- Scripts en orden de dependencias -->
+    <script src="js/resultado-ip.js"></script>
+    <script src="js/validador.js"></script>
+    <script src="js/calculadora.js"></script>
+    <script src="js/ui-manager.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
