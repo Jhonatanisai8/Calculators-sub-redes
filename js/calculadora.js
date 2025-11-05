@@ -112,12 +112,12 @@ class CalculadoraSubredes {
     }
 
     /**
-     * Calcula el gateway predeterminado (primer host de la subred)
-     * @param {string} ipRed - IP de red
-     * @returns {string} - IP del gateway
+     * Calcula el gateway predeterminado como el último host de la subred
+     * @param {string} ipBroadcast - IP de broadcast de la subred
+     * @returns {string} - IP del gateway (igual al último host)
      */
-    static calcularGateway(ipRed) {
-        return this.calcularPrimerHost(ipRed);
+    static calcularGateway(ipBroadcast) {
+        return this.calcularUltimoHost(ipBroadcast);
     }
 
     /**
@@ -156,7 +156,7 @@ class CalculadoraSubredes {
         const ipBroadcast = this.calcularIpBroadcast(ipRed, mascara);
         const primerHost = this.calcularPrimerHost(ipRed);
         const ultimoHost = this.calcularUltimoHost(ipBroadcast);
-        const gateway = this.calcularGateway(ipRed);
+        const gateway = this.calcularGateway(ipBroadcast);
         const totalHosts = this.calcularHostsDesdeMascara(mascara);
 
         // Crear y retornar una instancia de ResultadoIp
